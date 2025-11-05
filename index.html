@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>متجر المجوهرات — Jewelry Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">JS</div>
+        <div class="brand-text">
+          <div id="siteTitle">متجر المجوهرات</div>
+          <div id="siteTag">فخامة · ثقة · جودة</div>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="langBtn" class="lang">EN</button>
+        <nav class="nav">
+          <button data-page="home" class="nav-btn">الرئيسية</button>
+          <button data-page="shop" class="nav-btn">المتجر</button>
+          <button data-page="sell" class="nav-btn">البيع</button>
+          <button data-page="login" class="nav-btn">تسجيل الدخول</button>
+          <button data-page="contact" class="nav-btn">تواصل</button>
+        </nav>
+        <button id="openCart" class="cart-btn">🛒 <span id="cartCount">0</span></button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Home -->
+      <section id="home" class="page-section active">
+        <div class="hero">
+          <div class="hero-text">
+            <h1 id="heroTitle">فخامة تلتقي بالأصالة</h1>
+            <p id="heroDesc">اكتشف مجموعتنا المختارة من الخواتم، القلائد، والأساور.</p>
+            <div class="hero-actions">
+              <button class="primary" data-go="shop">تسوّق الآن</button>
+              <button class="ghost" data-go="sell">اعرض مجوهراتك</button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1539884260451-2d42b4f3e91b?q=80&w=1200&auto=format&fit=crop" alt="">
+          </div>
+        </div>
+        <h3 class="section-title">منتجات مميزة</h3>
+        <div id="featured" class="grid"></div>
+      </section>
+
+      <!-- Shop -->
+      <section id="shop" class="page-section">
+        <h2 class="section-title">المتجر</h2>
+        <div id="shopGrid" class="grid"></div>
+      </section>
+
+      <!-- Sell -->
+      <section id="sell" class="page-section">
+        <h2 class="section-title">اعرض مجوهراتك</h2>
+        <form id="sellForm" class="form">
+          <input id="sellTitle" placeholder="اسم المنتج" required>
+          <input id="sellPrice" placeholder="السعر (د.ت)" type="number" required>
+          <input id="sellImage" placeholder="رابط الصورة (اختياري)">
+          <textarea id="sellDesc" placeholder="الوصف"></textarea>
+          <button class="primary" type="submit">أرسل للعرض</button>
+        </form>
+      </section>
+
+      <!-- Login -->
+      <section id="login" class="page-section">
+        <h2 class="section-title">تسجيل الدخول</h2>
+        <form id="loginForm" class="form">
+          <input id="email" type="email" placeholder="البريد الإلكتروني" required>
+          <input id="password" type="password" placeholder="كلمة المرور" required>
+          <button class="primary" type="submit">دخول (تجريبي)</button>
+        </form>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="page-section">
+        <h2 class="section-title">تواصل معنا</h2>
+        <form id="contactForm" class="form">
+          <input id="cname" placeholder="الاسم" required>
+          <input id="cemail" type="email" placeholder="بريدك" required>
+          <textarea id="cmsg" placeholder="رسالتك" required></textarea>
+          <button class="primary" type="submit">إرسال</button>
+        </form>
+      </section>
+
+      <!-- Cart -->
+      <section id="cart" class="page-section">
+        <h2 class="section-title">سلة المشتريات</h2>
+        <div id="cartArea"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div id="copyright">© <span id="year"></span> متجر المجوهرات</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
